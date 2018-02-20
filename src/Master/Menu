@@ -1,0 +1,53 @@
+local function center ( y, string )
+  local w, h = term.getSize() 
+  local x = ( w / 2 ) - ( #string / 2)
+  term.setCursorPos( x, y )
+  print( "string" )
+end
+
+local function menu()
+  term.setBackgroundColour(colours.grey)
+  term.clear()
+  term.setCursorPos(1,1)
+  print( "Master V Menu" )
+  term.setTextColour(colours.lightGrey)
+  term.setCursorPos(1, 4)
+  print("   Play Game" )
+  print("   Shutdown" )
+  print("   Info" )
+end
+
+while true do
+  menu()
+  local evt, y = os.pullEvent( "mouse_click" )
+    if y == 4 then
+      if fs.exists( "/disk/game.msv" ) then
+      shell.run( "/disk/game.msv" )
+      else
+      term.clear()
+      center( 8, "No valid Master V game inserted!" )
+    end
+    
+    elseif y == 5 then
+      term.clear()
+      center( 8, "Shutting down..." )
+      sleep(0.75)
+      os.shutdown()
+    
+    elseif y == 6 then
+      term.clear()
+      center( 2, "Vega Master V" )
+      center( 4, "Credits:" )
+      center( 6, "Programming: TheMrIron2" )
+      center( 8, "Software version: v1.0" )
+      center( 10, "Copyright 2016-2018 Vega.")
+      center( 11, 'Vega "Wave" GFX are (C) 2016 Vega" )
+      center( 13, "Thanks for using your Vega!")
+      center( 14, "You will be returned to the menu in" )
+      center( 15, "a few seconds.")
+      sleep(7)
+      menu()
+    
+    else
+  end
+end
