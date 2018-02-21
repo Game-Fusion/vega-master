@@ -8,6 +8,6 @@ end
 term.setBackgroundColour(colours.grey)
 term.setTextColour(colours.lightGrey) -- prototype colour scheme
 term.clear()
-center("Welcome to Master V!") -- master vega, get it?
+center(8, "Welcome to Master V!") -- master vega, get it?
 sleep(2)
 shell.run("/Master/Menu")
