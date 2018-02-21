@@ -16,9 +16,9 @@ local function menu()
   print("   Shutdown" )
   print("   Info" )
 end
+menu()
 
 while true do
-  menu()
   local evt, y = os.pullEvent( "mouse_click" )
     if y == 4 then
       if fs.exists( "/disk/game.msv" ) then
@@ -41,7 +41,7 @@ while true do
       center( 6, "Programming: TheMrIron2" )
       center( 8, "Software version: v1.0" )
       center( 10, "Copyright 2016-2018 Vega.")
-      center( 11, 'Vega "Wave" GFX are (C) 2016 Vega" )
+      center( 11, 'Vega "Wave" GFX are (C) 2016 Vega' )
       center( 13, "Thanks for using your Vega!")
       center( 14, "You will be returned to the menu in" )
       center( 15, "a few seconds.")
