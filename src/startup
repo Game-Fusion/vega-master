@@ -2,7 +2,7 @@ local function center ( y, string )
   local w, h = term.getSize() 
   local x = ( w / 2 ) - ( #string / 2)
   term.setCursorPos( x, y )
-  print( "string" )
+  print( string )
 end
 
 term.setBackgroundColour(colours.grey)
