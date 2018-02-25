@@ -6,8 +6,8 @@ local function center ( y, string )
 end
 
 term.setBackgroundColour(colours.grey)
-term.setTextColour(colours.lightGrey) -- prototype colour scheme
+term.setTextColour(colours.lightGrey)
 term.clear()
-center(8, "Welcome to Master V!") -- master vega, get it?
+center(8, "Welcome to Master V!" ) -- master vega, get it?
 sleep(2)
-shell.run("/Master/Menu")
+shell.run( "/Master/Menu" )
